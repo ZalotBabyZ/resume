@@ -40,7 +40,7 @@ function EducationCard() {
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
-                  <a href={list.web} className="list-head">
+                  <a href={list.web} className="list-head" target="_blank">
                     {list.place}
                   </a>
                 ) : (

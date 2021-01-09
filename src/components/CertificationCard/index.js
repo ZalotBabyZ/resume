@@ -49,7 +49,7 @@ function CertificationCard() {
               <div className="timeline-list">
                 <div className="list-head--wrap">
                   {list.web ? (
-                    <a href={list.web} className="list-head">
+                    <a href={list.web} className="list-head" target="_blank">
                       {list.place}:
                     </a>
                   ) : (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const educate = [
+const work = [
   {
     year: '2019 - 2021',
     work: 'Online Merchant',
@@ -15,14 +15,14 @@ function ExperienceCard() {
       <div className="card-head">WORK EXPERIENCE</div>
       <div className="card-body">
         <div className="line"></div>
-        {educate.map((list) => {
+        {work.map((list) => {
           return (
             <div className="timeline-object">
               <div className="timeline-point"> </div>
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
-                  <a href={list.web} className="list-head">
+                  <a href={list.web} className="list-head" target="_blank">
                     {list.work}
                   </a>
                 ) : (

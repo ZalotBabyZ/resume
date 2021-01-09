@@ -112,7 +112,14 @@ a:hover {
   padding: 10px;
   font-size: 15px;
 }
-
+.card:hover .card-head {
+  background: -webkit-linear-gradient(
+    75deg,
+    var(--secondaryLight-color),
+    var(--secondaryDark-color),
+    var(--primaryLight-color)
+  );
+}
 .line {
   position: absolute;
   left: 30px;
@@ -125,7 +132,6 @@ a:hover {
 .card-body:hover .line {
   background: -webkit-linear-gradient(
     45deg,
-    var(--primaryLight-color),
     var(--secondaryDark-color),
     var(--secondaryLight-color),
     var(--secondaryDark-color)
@@ -182,7 +188,7 @@ a:hover {
 }
 .timeline-point:hover ~ .timeline-list {
   background: -webkit-linear-gradient(
-    45deg,
+    -75deg,
     var(--secondaryLight-color),
     var(--secondaryDark-color),
     var(--primaryLight-color)
