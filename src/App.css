@@ -48,6 +48,24 @@
   margin: 0px;
   padding: 0px;
 }
+
+a:link,
+a:visited,
+a:active {
+  color: var(--primaryLight-color);
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover {
+  background: -webkit-linear-gradient(
+    33deg,
+    var(--primaryDark-color),
+    var(--primaryLight-color),
+    var(--primaryDark-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .page-container {
   display: flex;
   width: 100vw;
@@ -58,14 +76,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
 }
 .right-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 70%;
-  overflow: auto;
 }
 .card {
   display: flex;
@@ -103,8 +119,17 @@
   height: 90%;
   width: 5px;
   border-radius: 3px;
-  background-color: var(--secondaryDark-color);
+  background-color: var(--secondaryLight-color);
   z-index: -1;
+}
+.card-body:hover .line {
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--primaryLight-color),
+    var(--secondaryDark-color),
+    var(--secondaryLight-color),
+    var(--secondaryDark-color)
+  );
 }
 .timeline-object {
   display: flex;
@@ -125,38 +150,70 @@
   border-radius: 50%;
   background-color: var(--primaryLight-color);
 }
+.timeline-point:hover {
+  background: -webkit-linear-gradient(var(--primaryLight-color), var(--primaryDark-color));
+}
 .timeline-date {
   position: absolute;
-  left: 5px;
+  left: 10px;
   font-size: 10px;
+  padding: 2px;
   font-color: var(--primaryLight-color);
   background-color: white;
   border-radius: 3px;
   border: 1px dashed var(--primaryLight-color);
 }
+.timeline-point:hover + .timeline-date {
+  color: white;
+  background: -webkit-linear-gradient(var(--primaryLight-color), var(--primaryDark-color));
+}
 .timeline-list {
   margin-left: 30px;
-  padding: 5px;
+  padding: 5px 10px;
   width: 600px;
   max-width: 80%;
-  height: 80px;
+  min-height: 80px;
   background: var(--secondaryLight-color);
   position: relative;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 12px;
+}
+.timeline-point:hover ~ .timeline-list {
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--secondaryLight-color),
+    var(--secondaryDark-color),
+    var(--primaryLight-color)
+  );
 }
 .timeline-list:before {
   content: '';
   position: absolute;
-  right: 100%;
+  right: 99%;
   top: 20px;
   width: 0;
   height: 0;
   border-top: 13px solid transparent;
   border-right: 26px solid var(--secondaryLight-color);
   border-bottom: 13px solid transparent;
+  z-index: -1;
+}
+
+.list-head--wrap {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+}
+.list-head {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primaryLight-color);
+}
+.list-subhead {
+  font-size: 14px;
+  font-weight: 600;
 }
 
 @media only screen and (min-width: 766px) {
@@ -172,7 +229,6 @@
     border-right: 2px var(--secondaryDark-color) solid;
   }
   .right-container {
-    justify-content: space-around;
     width: 70%;
     height: 100%;
     overflow: auto;
