@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const educate = [
   {
@@ -33,18 +34,20 @@ function EducationCard() {
       <div className="card-head">EDUCATION</div>
       <div className="card-body">
         <div className="line"></div>
-        {educate.map((list) => {
+        {educate.map((list, ind) => {
           return (
-            <div className="timeline-object">
+            <div className="timeline-object" key={ind}>
               <div className="timeline-point"> </div>
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
                   <a href={list.web} className="list-head" target="_blank">
-                    {list.place}
+                    <FontAwesomeIcon icon="external-link-alt" /> {list.place}
                   </a>
                 ) : (
-                  <span className="list-head">{list.place}</span>
+                  <span className="list-head">
+                    <FontAwesomeIcon icon="unlink" /> {list.place}
+                  </span>
                 )}
                 <div className="list-subhead">{list.course}</div>
               </div>

@@ -1,5 +1,37 @@
-.container-contact-card {
-  width: 100%;
-  border-radius: 5px;
-  background-color: white;
+.contact-body {
+  align-items: center;
+  color: var(--primaryLight-color);
+}
+.contact-list {
+  display: flex;
+  width: 95%;
+}
+.contact-body > :not(:first-child) {
+  border-top: var(--primaryLight-color) 2px dashed;
+}
+.contact-content {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  word-break: break-all;
+}
+.contact-content {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 766px) {
+  .contact-card {
+    height: 30vh;
+  }
+  .contact-body {
+    overflow: auto;
+  }
+  .contact-content {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 428px) {
+  .contact-content {
+    font-size: 14px;
+  }
 }

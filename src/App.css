@@ -8,45 +8,32 @@
 .App {
   text-align: left;
 }
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 5px;
+  background-color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-track-piece:start {
+  border-radius: 5px;
+  box-shadow: inset 0 0 2px grey;
 }
-
-.App-link {
-  color: #61dafb;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(45deg, var(--secondaryDark-color), white, var(--secondaryDark-color));
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+a {
+  word-break: break-all;
 }
 
 a:link,
@@ -65,6 +52,9 @@ a:hover {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.page-header {
+  display: none;
 }
 .page-container {
   display: flex;
@@ -105,7 +95,6 @@ a:hover {
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   min-height: 40px;
   width: 100%;
@@ -156,7 +145,7 @@ a:hover {
   border-radius: 50%;
   background-color: var(--primaryLight-color);
 }
-.timeline-point:hover {
+.timeline-object:hover .timeline-point {
   background: -webkit-linear-gradient(var(--primaryLight-color), var(--primaryDark-color));
 }
 .timeline-date {
@@ -169,7 +158,8 @@ a:hover {
   border-radius: 3px;
   border: 1px dashed var(--primaryLight-color);
 }
-.timeline-point:hover + .timeline-date {
+
+.timeline-object:hover .timeline-date {
   color: white;
   background: -webkit-linear-gradient(var(--primaryLight-color), var(--primaryDark-color));
 }
@@ -186,7 +176,7 @@ a:hover {
   border-radius: 10px;
   font-size: 12px;
 }
-.timeline-point:hover ~ .timeline-list {
+.timeline-object:hover .timeline-list {
   background: -webkit-linear-gradient(
     -75deg,
     var(--secondaryLight-color),
@@ -222,12 +212,48 @@ a:hover {
   font-weight: 600;
 }
 
+.icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  width: 5%;
+  min-width: 30px;
+  height: 30px;
+  color: var(--primaryLight-color);
+  border-right: var(--primaryLight-color) 2px dashed;
+  margin: 2px;
+}
+.vh-five {
+  display: none;
+}
+
 @media only screen and (min-width: 766px) {
+  .page-header {
+    background: -webkit-linear-gradient(45deg, var(--secondaryDark-color), white, var(--secondaryDark-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    height: 10vh;
+    width: 100vw;
+  }
+
+  .page-header h2 {
+    text-align: center;
+    background: -webkit-linear-gradient(
+      33deg,
+      var(--primaryDark-color),
+      var(--primaryLight-color),
+      var(--primaryDark-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .page-container {
+    height: 90vh;
     flex-direction: row;
   }
   .left-container {
-    justify-content: space-around;
     border-right-width: 0px;
     width: 30%;
     height: 100%;
@@ -250,5 +276,22 @@ a:hover {
   }
   .right-container {
     width: 100%;
+  }
+  .vh-five {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 5vh;
+    background: -webkit-linear-gradient(
+      33deg,
+      var(--primaryDark-color),
+      var(--primaryLight-color),
+      var(--primaryDark-color)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 700;
   }
 }

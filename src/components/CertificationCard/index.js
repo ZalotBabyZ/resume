@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const certificate = [
   {
@@ -41,15 +42,16 @@ function CertificationCard() {
       <div className="card-head">CERTIFICATION</div>
       <div className="card-body">
         <div className="line"></div>
-        {certificate.map((list) => {
+        {certificate.map((list, ind) => {
           return (
-            <div className="timeline-object">
+            <div className="timeline-object" key={ind}>
               <div className="timeline-point"> </div>
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 <div className="list-head--wrap">
                   {list.web ? (
                     <a href={list.web} className="list-head" target="_blank">
+                      <FontAwesomeIcon icon="external-link-alt" /> &nbsp;
                       {list.place}:
                     </a>
                   ) : (
@@ -61,10 +63,14 @@ function CertificationCard() {
                   {list.certify ? (
                     list.cerLink ? (
                       <a href={list.cerLink} target="_blank">
-                        + {list.certify}
+                        <FontAwesomeIcon icon="angle-double-right" /> {list.certify}&nbsp;&nbsp;
+                        <FontAwesomeIcon icon="external-link-alt" />
                       </a>
                     ) : (
-                      <>+ {list.certify}</>
+                      <>
+                        <FontAwesomeIcon icon="angle-double-right" />
+                        {list.certify}
+                      </>
                     )
                   ) : null}
                 </p>

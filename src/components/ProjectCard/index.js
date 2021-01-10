@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 const project = [
   {
     year: '2020  -  2021',
@@ -64,19 +66,25 @@ function ProjectCard() {
                   <span className="list-head">{list.name}:</span>
                   {list.web ? (
                     <a href={list.web} className="list-subhead" target="_blank">
-                      &nbsp;&nbsp;&nbsp;{list.web}
+                      &nbsp;&nbsp;&nbsp;{list.web} <FontAwesomeIcon icon="external-link-alt" />
                     </a>
                   ) : null}
                 </div>
-                {list.list.map((note) => {
-                  if (!note.link) {
-                    return <p> + {note.content}</p>;
-                  }
+                {list.list.map((note, ind) => {
                   return (
-                    <p>
-                      <a href={note.link} target="_blank">
-                        + {note.link}
-                      </a>
+                    <p key={ind}>
+                      <FontAwesomeIcon icon="angle-double-right" />
+                      &nbsp;
+                      {!note.link ? (
+                        <span>{note.content}</span>
+                      ) : (
+                        <span>
+                          <a href={note.link} target="_blank">
+                            {note.link}&nbsp;&nbsp;
+                            <FontAwesomeIcon icon="external-link-alt" />
+                          </a>
+                        </span>
+                      )}
                     </p>
                   );
                 })}
