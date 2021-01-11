@@ -230,6 +230,35 @@ a:hover {
   margin: 2px;
 }
 
+.print-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: -webkit-linear-gradient(45deg, var(--primaryDark-color), white, var(--primaryDark-color));
+  font-size: 25px;
+  z-index: 3;
+}
+.print-resume-clue {
+  display: none;
+}
+.print-resume:hover {
+  background: -webkit-linear-gradient(135deg, var(--primaryLight-color), white, var(--primaryDark-color));
+}
+.print-resume:hover .print-resume-clue {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  font-size: 15px;
+  color: var(--primaryDark-color);
+}
 @media only screen and (min-width: 766px) {
   .page-header {
     background: -webkit-linear-gradient(45deg, var(--secondaryDark-color), white, var(--secondaryDark-color));
@@ -269,6 +298,7 @@ a:hover {
     overflow: auto;
   }
 }
+
 @media only screen and (max-width: 766px) {
   .page-container {
     flex-direction: column;
@@ -330,5 +360,8 @@ a:hover {
   }
   .right-container-portion {
     height: 78vh;
+  }
+  .print-resume {
+    display: none;
   }
 }
