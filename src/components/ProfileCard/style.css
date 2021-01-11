@@ -81,13 +81,13 @@
     height: 60vh;
   }
   .photo-box {
-    height: 50%;
+    height: 60%;
   }
   .photo {
     height: 80%;
   }
   .profile-list-box {
-    height: 30%;
+    height: 40%;
     font-size: 16px;
     font-weight: 700px;
     overflow: auto;
