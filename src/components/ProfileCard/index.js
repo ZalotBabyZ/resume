@@ -6,7 +6,7 @@ function ProfileCard() {
   return (
     <div className="card profile-card">
       <div className="photo-box">
-        <img src={photo} alt="my picture" className="photo" />
+        <img src={photo} alt="chutinan chirdchoothum" className="photo" />
       </div>
       <div className="profile-list-box">
         <div className="quote">NOTHING CAN STOP YOU ONCE YOU HAVE A CLEAR VISION OF WHAT YOU WANT.</div>

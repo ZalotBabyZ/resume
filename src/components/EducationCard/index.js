@@ -41,7 +41,7 @@ function EducationCard() {
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
-                  <a href={list.web} className="list-head" target="_blank">
+                  <a href={list.web} className="list-head" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon="external-link-alt" /> {list.place}
                   </a>
                 ) : (

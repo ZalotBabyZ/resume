@@ -50,7 +50,7 @@ function CertificationCard() {
               <div className="timeline-list">
                 <div className="list-head--wrap">
                   {list.web ? (
-                    <a href={list.web} className="list-head" target="_blank">
+                    <a href={list.web} className="list-head" target="_blank" rel="noopener noreferrer">
                       <FontAwesomeIcon icon="external-link-alt" /> &nbsp;
                       {list.place}:
                     </a>
@@ -62,7 +62,7 @@ function CertificationCard() {
                 <p>
                   {list.certify ? (
                     list.cerLink ? (
-                      <a href={list.cerLink} target="_blank">
+                      <a href={list.cerLink} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon="angle-double-right" /> {list.certify}&nbsp;&nbsp;
                         <FontAwesomeIcon icon="external-link-alt" />
                       </a>

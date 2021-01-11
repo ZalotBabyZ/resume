@@ -56,16 +56,16 @@ function ProjectCard() {
       <div className="card-head">PROJECT EXPERIENCE</div>
       <div className="card-body">
         <div className="line"></div>
-        {project.map((list) => {
+        {project.map((list, listInd) => {
           return (
-            <div className="timeline-object">
+            <div className="timeline-object" key={listInd}>
               <div className="timeline-point"> </div>
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 <div className="list-head--wrap">
                   <span className="list-head">{list.name}:</span>
                   {list.web ? (
-                    <a href={list.web} className="list-subhead" target="_blank">
+                    <a href={list.web} className="list-subhead" target="_blank" rel="noopener noreferrer">
                       &nbsp;&nbsp;&nbsp;{list.web} <FontAwesomeIcon icon="external-link-alt" />
                     </a>
                   ) : null}
@@ -79,7 +79,7 @@ function ProjectCard() {
                         <span>{note.content}</span>
                       ) : (
                         <span>
-                          <a href={note.link} target="_blank">
+                          <a href={note.link} target="_blank" rel="noopener noreferrer">
                             {note.link}&nbsp;&nbsp;
                             <FontAwesomeIcon icon="external-link-alt" />
                           </a>
