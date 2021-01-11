@@ -28,13 +28,14 @@ function App() {
       <div className="page-container">
         <div className="left-container">
           <ProfileCard />
-          <div className="vh-five">Résumé</div>
           <ContactCard />
         </div>
         <div className="right-container">
-          <SkillCard />
-          <ProjectCard />
-          <ExperienceCard />
+          <div className="right-container-portion">
+            <SkillCard />
+            <ProjectCard />
+            <ExperienceCard />
+          </div>
           <EducationCard />
           <CertificationCard />
           <MiniprojectCard />

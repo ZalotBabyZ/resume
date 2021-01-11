@@ -35,3 +35,8 @@
     font-size: 14px;
   }
 }
+@media print {
+  .contact-card {
+    height: 95%;
+  }
+}

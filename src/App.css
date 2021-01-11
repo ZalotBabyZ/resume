@@ -73,6 +73,12 @@ a:hover {
   align-items: center;
   width: 70%;
 }
+.right-container-portion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -223,9 +229,6 @@ a:hover {
   border-right: var(--primaryLight-color) 2px dashed;
   margin: 2px;
 }
-.vh-five {
-  display: none;
-}
 
 @media only screen and (min-width: 766px) {
   .page-header {
@@ -277,12 +280,23 @@ a:hover {
   .right-container {
     width: 100%;
   }
-  .vh-five {
+}
+.page-break {
+  display: none;
+}
+@media print {
+  .page-header {
+    background: -webkit-linear-gradient(45deg, var(--secondaryDark-color), white, var(--secondaryDark-color));
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 5vh;
+    padding: 5px 20px;
+    height: 40px;
+    width: 100vw;
+  }
+
+  .page-header * {
+    text-align: center;
     background: -webkit-linear-gradient(
       33deg,
       var(--primaryDark-color),
@@ -291,7 +305,30 @@ a:hover {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 16px;
+  }
+  .page-container {
+    width: 100vw;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-container {
+    border-right-width: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    height: 20vh;
+    border-right-width: 0px;
+  }
+  .left-container > * {
+    width: 48%;
+  }
+  .right-container {
+    width: 100%;
+    height: 100%;
+  }
+  .right-container-portion {
+    height: 78vh;
   }
 }
