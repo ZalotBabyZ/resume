@@ -5,7 +5,8 @@ const project = [
   {
     year: '2020  -  2021',
     name: 'ANCthailand',
-    web: '',
+    web:
+      'https://www.youtube.com/watch?fbclid=IwAR2LIbhz8Q4oUcybn6Relv_Ilz6wGted9UNx0AfnCILriRbJZTfas37iT1w&v=8C2q8LrX8Fg&feature=youtu.be',
     list: [
       { content: 'Medical service web application.', link: '' },
       {
@@ -31,7 +32,7 @@ const project = [
   {
     year: '2020  -  2021',
     name: 'doZalot project',
-    web: 'https://arcwebapp.com',
+    web: 'http://do.zzalot.com/',
     list: [
       { content: 'scrum board master [activity log].', link: '' },
       {
