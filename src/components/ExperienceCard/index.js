@@ -3,10 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const work = [
   {
-    year: '2019 - 2021',
+    year: '2019 - 2020',
     work: 'Online Merchant',
-    more: 'ajidsui shop, Shopee',
+    more: [
+      'ajidsui shop, Shopee [small Stationery shop]',
+      'Gain experience: Logistic and online shop backside system.',
+    ],
     web: 'https://shopee.co.th/baobaozc',
+  },
+  {
+    year: '2016 - 2021',
+    work: 'Prasert Apartment',
+    more: ['Apartment owner.', 'Customer service, Management and IT support.'],
+    web: '',
   },
 ];
 
@@ -31,7 +40,13 @@ function ExperienceCard() {
                     <FontAwesomeIcon icon="unlink" /> {list.work}
                   </span>
                 )}
-                <div className="list-subhead">{list.more}</div>
+                <div className="list-subhead">
+                  {list.more
+                    ? list.more.map((item) => {
+                        return <p>{item}</p>;
+                      })
+                    : null}
+                </div>
               </div>
             </div>
           );
