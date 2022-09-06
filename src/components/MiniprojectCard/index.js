@@ -33,7 +33,7 @@ const project = [
 
 function MiniprojectCard() {
   return (
-    <div className="card">
+    <div className="card timeline-card">
       <div className="card-head">MINI PROJECT</div>
       <div className="card-body">
         <div className="line"></div>

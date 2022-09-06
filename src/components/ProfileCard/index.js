@@ -1,6 +1,6 @@
-import React from 'react';
-import photo from '../../asset/photo/photo.jpg';
-import './style.css';
+import React from "react";
+import photo from "../../asset/photo/photo2.jpg";
+import "./style.css";
 
 function ProfileCard() {
   return (
@@ -9,9 +9,11 @@ function ProfileCard() {
         <img src={photo} alt="chutinan chirdchoothum" className="photo" />
       </div>
       <div className="profile-list-box">
-        <div className="quote">NOTHING CAN STOP YOU ONCE YOU HAVE A CLEAR VISION OF WHAT YOU WANT.</div>
+        <div className="quote">
+          NOTHING CAN STOP YOU ONCE YOU HAVE A CLEAR VISION OF WHAT YOU WANT.
+        </div>
         <p className="profile-list"> Chutinan Chirdchoothum </p>
-        <p className="profile-list"> Web Developer</p>
+        <p className="profile-list"> Web Developer, Mobile App Developer</p>
       </div>
     </div>
   );

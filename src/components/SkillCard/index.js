@@ -16,6 +16,7 @@ const skill = [
   {
     group: 'JavaScript Libraries & Frameworks',
     list: [
+      { name: 'React Native', iconFeb: 'react' },
       { name: 'React JS', iconFeb: 'react' },
       { name: 'Node.js', iconFeb: 'node-js' },
       { name: 'Express.js', iconFeb: '' },

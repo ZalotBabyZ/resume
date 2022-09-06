@@ -30,7 +30,7 @@ const educate = [
 
 function EducationCard() {
   return (
-    <div className="card">
+    <div className="card timeline-card">
       <div className="card-head">EDUCATION</div>
       <div className="card-body">
         <div className="line"></div>

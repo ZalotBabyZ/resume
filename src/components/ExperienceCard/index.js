@@ -1,27 +1,39 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const work = [
   {
-    year: '2019 - 2020',
-    work: 'Online Merchant',
-    more: [
-      'ajidsui shop, Shopee [small Stationery shop]',
-      'Gain experience: Logistic and online shop backside system.',
-    ],
-    web: 'https://shopee.co.th/baobaozc',
+    year: "2021 - 2022",
+    work: "Q box point [Farmbook]",
+    more: ["Mobile App developer", "React native"],
+    web: ""
   },
   {
-    year: '2016 - 2021',
-    work: 'Prasert Apartment',
-    more: ['Apartment owner.', 'Customer service, Management and IT support.'],
-    web: '',
+    year: "2021",
+    work: "Data Guardian",
+    more: ["Frontend developer", "React"],
+    web: ""
   },
+  {
+    year: "2019 - 2020",
+    work: "Online Merchant",
+    more: [
+      "ajidsui shop, Shopee [small Stationery shop]",
+      "Gain experience: Logistic and online shop backside system."
+    ],
+    web: ""
+  },
+  {
+    year: "2016 - 2021",
+    work: "Prasert Apartment",
+    more: ["Apartment owner.", "Customer service, Management and IT support."],
+    web: ""
+  }
 ];
 
 function ExperienceCard() {
   return (
-    <div className="card">
+    <div className="card timeline-card">
       <div className="card-head">WORK EXPERIENCE</div>
       <div className="card-body">
         <div className="line"></div>
@@ -32,12 +44,17 @@ function ExperienceCard() {
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
-                  <a href={list.web} className="list-head" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={list.web}
+                    className="list-head"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FontAwesomeIcon icon="external-link-alt" /> {list.work}
                   </a>
                 ) : (
                   <span className="list-head">
-                    <FontAwesomeIcon icon="unlink" /> {list.work}
+                    <FontAwesomeIcon icon="circle"  /> {list.work}
                   </span>
                 )}
                 <div className="list-subhead">
