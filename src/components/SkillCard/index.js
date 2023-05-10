@@ -2,6 +2,8 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './style.css';
+import { IconList } from '../../asset/SVGComponent/svgIcon';
+import { TSIcon } from '../../asset/SVGComponent/IconTS';
 
 const skill = [
   {
@@ -10,6 +12,7 @@ const skill = [
       { name: 'HTML5', iconFeb: 'html5' },
       { name: 'CSS3', iconFeb: 'css3-alt' },
       { name: 'JavaScript', iconFeb: 'js-square' },
+      { name: 'TypeScript', iconSVG: 'TS' },
       { name: 'Python', iconFeb: 'python' },
     ],
   },
@@ -25,7 +28,7 @@ const skill = [
   },
   {
     group: 'Databases & Platforms',
-    list: [{ name: ' MySQL', iconFeb: '' }],
+    list: [{ name: ' MySQL', iconSVG: 'SQL' }],
   },
   {
     group: 'Tools & Developer Tools',
@@ -34,8 +37,9 @@ const skill = [
   {
     group: 'Others',
     list: [
-      { name: 'Adobe Illustrator', iconFeb: '' },
-      { name: 'Adobe Photoshop', iconFeb: '' },
+      { name: 'Adobe Illustrator', iconSVG: '' },
+      { name: 'Adobe Photoshop', iconSVG: 'PS' },
+      { name: 'Adobe Indesign', iconSVG: 'ID' },
     ],
   },
 ];
@@ -57,6 +61,8 @@ function SkillCard() {
                         <FontAwesomeIcon icon={['fab', item.iconFeb]} />
                       ) : item.iconFA ? (
                         <FontAwesomeIcon icon={item.iconFA} />
+                      ) : item.iconSVG ? (
+                        IconList('var(--primaryLight-color)', 20)[item.iconSVG]
                       ) : (
                         <FontAwesomeIcon icon="circle" />
                       )}

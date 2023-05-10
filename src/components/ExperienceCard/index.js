@@ -1,34 +1,40 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const work = [
   {
-    year: "2021 - 2022",
-    work: "Q box point [Farmbook]",
-    more: ["Mobile App developer", "React native"],
-    web: ""
+    year: '2022 - 2023',
+    work: 'BlueSeas Enterprise Co., Ltd.',
+    more: ['Full-Stack Developer', 'React', 'nodeJS', 'mongoDB'],
+    web: 'https://www.blueseas.co.th/',
   },
   {
-    year: "2021",
-    work: "Data Guardian",
-    more: ["Frontend developer", "React"],
-    web: ""
+    year: '2021 - 2022',
+    work: 'Q box point [Farmbook]',
+    more: ['Mobile App developer', 'React native'],
+    web: '',
   },
   {
-    year: "2019 - 2020",
-    work: "Online Merchant",
-    more: [
-      "ajidsui shop, Shopee [small Stationery shop]",
-      "Gain experience: Logistic and online shop backside system."
-    ],
-    web: ""
+    year: '2021',
+    work: 'Data Guardian',
+    more: ['Frontend developer', 'React'],
+    web: '',
   },
-  {
-    year: "2016 - 2021",
-    work: "Prasert Apartment",
-    more: ["Apartment owner.", "Customer service, Management and IT support."],
-    web: ""
-  }
+  // {
+  //   year: "2019 - 2020",
+  //   work: "Online Merchant",
+  //   more: [
+  //     "ajidsui shop, Shopee [small Stationery shop]",
+  //     "Gain experience: Logistic and online shop backside system."
+  //   ],
+  //   web: ""
+  // },
+  // {
+  //   year: "2016 - 2021",
+  //   work: "Prasert Apartment",
+  //   more: ["Apartment owner.", "Customer service, Management and IT support."],
+  //   web: ""
+  // }
 ];
 
 function ExperienceCard() {
@@ -44,17 +50,12 @@ function ExperienceCard() {
               <div className="timeline-date"> {list.year} </div>
               <div className="timeline-list">
                 {list.web ? (
-                  <a
-                    href={list.web}
-                    className="list-head"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={list.web} className="list-head" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon="external-link-alt" /> {list.work}
                   </a>
                 ) : (
                   <span className="list-head">
-                    <FontAwesomeIcon icon="circle"  /> {list.work}
+                    <FontAwesomeIcon icon="circle" /> {list.work}
                   </span>
                 )}
                 <div className="list-subhead">
