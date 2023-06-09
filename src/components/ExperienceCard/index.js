@@ -11,6 +11,7 @@ const work = [
       {
         name: 'blueDoc',
         detail: [
+          { content: 'Web application.[React, MongoDB]', link: '' },
           {
             content:
               'Text editor template to generate government document and convert to pdf with stamp and sign system.',
@@ -34,8 +35,7 @@ const work = [
         name: 'FARM TODAY',
         web: 'https://apps.apple.com/us/app/farm-today/id1510326837',
         detail: [
-          { content: 'Mobile application.', link: '' },
-          { content: 'Using React native', link: '' },
+          { content: 'Mobile application.[React native]', link: '' },
           {
             content: 'Help farmers manage their farms and products like personal assistance.',
             link: '',
@@ -54,8 +54,7 @@ const work = [
         name: 'FARM SKY',
         web: 'https://apps.apple.com/us/app/farm-sky/id1477303442',
         detail: [
-          { content: 'Mobile application.', link: '' },
-          { content: 'Using React native', link: '' },
+          { content: 'Mobile application.[React native]', link: '' },
           {
             content: 'Help managers and enterprises manage their client farmers.',
             link: '',
@@ -75,7 +74,7 @@ const work = [
   {
     year: '2021',
     work: 'Data Guardian',
-    more: ['Frontend developer', 'React'],
+    more: ['Frontend developer', '[React]'],
     web: '',
   },
   // {
@@ -125,7 +124,7 @@ function ExperienceCard() {
                     : null}
                   {list.project?.map((list, listInd) => {
                     return (
-                      <>
+                      <div style={{ marginLeft: 10 }} key={listInd}>
                         <div className="list-head--wrap">
                           {list.web ? (
                             <a href={list.web} className="list-subhead" target="_blank" rel="noopener noreferrer">
@@ -141,7 +140,7 @@ function ExperienceCard() {
                         </div>
                         {list.detail.map((note, ind) => {
                           return (
-                            <p key={ind}>
+                            <p key={ind} style={{ marginLeft: 10 }}>
                               <FontAwesomeIcon icon={!!note.link ? 'external-link-alt' : 'angle-double-right'} />
                               &nbsp;
                               {!note.link ? (
@@ -156,7 +155,7 @@ function ExperienceCard() {
                             </p>
                           );
                         })}
-                      </>
+                      </div>
                     );
                   })}
                 </div>

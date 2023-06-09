@@ -13,14 +13,11 @@ const educate = [
         name: 'ANCthailand [Group Final Project]',
         web: '',
         detail: [
+          { content: 'Web application.[React, AntD, ExpressJS, Sequelize, Cloudinary]', link: '' },
           { content: 'Medical service web application.', link: '' },
           {
             content:
               'This project is an idea of substitute the Antenatal Care part of Thailand Mom&Child book with an online web application.',
-            link: '',
-          },
-          {
-            content: 'Using React antD ExpressJS Sequelize and cloudinary',
             link: '',
           },
           {
@@ -41,11 +38,8 @@ const educate = [
         name: 'doZalot project [Personal Final Project]',
         web: '',
         detail: [
+          { content: 'Web application.[React, ExpressJS, Sequelize, Cloudinary]', link: '' },
           { content: 'scrum board master [activity log].', link: '' },
-          {
-            content: 'Using React ExpressJS Sequelize and cloudinary',
-            link: '',
-          },
           {
             content: 'Software Park Thailand Code Camp final personal project.',
             link: '',
@@ -107,7 +101,7 @@ function EducationCard() {
                   {list.course}
                   {list.project?.map((list, listInd) => {
                     return (
-                      <>
+                      <div style={{ marginLeft: 10 }} key={listInd}>
                         <div className="list-head--wrap">
                           {list.web ? (
                             <a href={list.web} className="list-subhead" target="_blank" rel="noopener noreferrer">
@@ -123,7 +117,7 @@ function EducationCard() {
                         </div>
                         {list.detail.map((note, ind) => {
                           return (
-                            <p key={ind}>
+                            <p style={{ marginLeft: 10 }} key={ind}>
                               <FontAwesomeIcon icon={!!note.link ? 'external-link-alt' : 'angle-double-right'} />
                               &nbsp;
                               {!note.link ? (
@@ -138,7 +132,7 @@ function EducationCard() {
                             </p>
                           );
                         })}
-                      </>
+                      </div>
                     );
                   })}
                 </div>
