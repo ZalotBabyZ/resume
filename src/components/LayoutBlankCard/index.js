@@ -1,104 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const work = [
-  {
-    year: '2022 - 2023',
-    work: 'BlueSeas Enterprise Co., Ltd.',
-    more: ['Full-Stack Developer', '[React, nodeJS, mongoDB]'],
-    web: 'https://www.blueseas.co.th/',
-    project: [
-      {
-        name: 'blueDoc',
-        detail: [
-          {
-            content:
-              'Text editor template to generate government document and convert to pdf with stamp and sign system.',
-            link: '',
-          },
-          {
-            content: 'Ramathibodi hospital project.',
-            link: '',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    year: '2021 - 2022',
-    work: 'Q box point [Farmbook]',
-    more: ['Mobile App developer', '[React native]'],
-    web: '',
-    project: [
-      {
-        name: 'FARM TODAY',
-        web: 'https://apps.apple.com/us/app/farm-today/id1510326837',
-        detail: [
-          { content: 'Mobile application.', link: '' },
-          { content: 'Using React native', link: '' },
-          {
-            content: 'Help farmers manage their farms and products like personal assistance.',
-            link: '',
-          },
-          {
-            content: 'Android link',
-            link: 'https://play.google.com/store/apps/details?id=farmbook.farmer.co.projectapp&hl',
-          },
-          {
-            content: 'IOS link',
-            link: 'https://apps.apple.com/us/app/farm-today/id1510326837',
-          },
-        ],
-      },
-      {
-        name: 'FARM SKY',
-        web: 'https://apps.apple.com/us/app/farm-sky/id1477303442',
-        detail: [
-          { content: 'Mobile application.', link: '' },
-          { content: 'Using React native', link: '' },
-          {
-            content: 'Help managers and enterprises manage their client farmers.',
-            link: '',
-          },
-          {
-            content: 'Android link',
-            link: 'https://play.google.com/store/apps/details?id=farmbook.co.projectapp',
-          },
-          {
-            content: 'IOS link',
-            link: 'https://apps.apple.com/us/app/farm-sky/id1477303442',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    year: '2021',
-    work: 'Data Guardian',
-    more: ['Frontend developer', 'React'],
-    web: '',
-  },
-  // {
-  //   year: "2019 - 2020",
-  //   work: "Online Merchant",
-  //   more: [
-  //     "ajidsui shop, Shopee [small Stationery shop]",
-  //     "Gain experience: Logistic and online shop backside system."
-  //   ],
-  //   web: ""
-  // },
-  // {
-  //   year: "2016 - 2021",
-  //   work: "Prasert Apartment",
-  //   more: ["Apartment owner.", "Customer service, Management and IT support."],
-  //   web: ""
-  // }
-];
+const work = [];
 
-function ExperienceCard() {
+function BlankCard() {
   return (
-    <div className="card timeline-card">
-      <div className="card-head">WORK EXPERIENCE</div>
+    <div className="card timeline-card" style={{ visibility: 'hidden' }}>
+      <div className="card-head">XXX</div>
       <div className="card-body">
         <div className="line"></div>
         {work.map((list, ind) => {
@@ -169,4 +77,4 @@ function ExperienceCard() {
   );
 }
 
-export default ExperienceCard;
+export default BlankCard;

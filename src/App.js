@@ -15,6 +15,7 @@ import ContactCard from './components/ContactCard';
 import EducationCard from './components/EducationCard';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
+import LayoutBlankCard from './components/LayoutBlankCard';
 // eslint-disable-next-line
 import MiniprojectCard from './components/MiniprojectCard';
 import ProfileCard from './components/ProfileCard';
@@ -46,7 +47,8 @@ function App() {
             <ExperienceCard />
             <EducationCard />
             <CertificationCard />
-            <ProjectCard />
+            <LayoutBlankCard />
+            {/* <ProjectCard /> */}
             {/* <MiniprojectCard /> */}
           </div>
         </div>
