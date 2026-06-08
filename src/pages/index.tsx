@@ -63,7 +63,7 @@ export default function ResumeApp() {
       >
         {isGenerating ? <Loader2 className="animate-spin" size={20} /> : <Download size={20} />}
         <span className="font-semibold text-sm shadow-sm">
-          {isGenerating ? "Generating A4 PDF..." : "Download PDF"}
+          {isGenerating ? "Generating PDF..." : "Download Resume"}
         </span>
       </button>
 
