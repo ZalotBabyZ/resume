@@ -14,34 +14,11 @@ export const RESUME_CONFIG: IResumeConfig = {
   professionalSummary: "Senior Fullstack Developer (React/NodeJS/React Native) with 5 years of experience, specializing in architectural innovations that eliminate redundant workflows for QA and developers. Excels in cross-functional collaboration (PO, QA, UX/UI) to establish highly scalable and maintainable project foundations. Currently driven to design AI-integrated internal tools and architectures that optimize team efficiency, empowering cross-functional teams to systematically focus on true business value.",
   competencies: [
     { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NodeJS", "TypeScript", "NextJS"],isA4: true },
-    { id: "comp-ai", category: "AI Integration & Efficiency", skills: ["AI Power User (since 2025)", "AI Token Optimization", "Root-cause Analysis"],isA4: true },
+    { id: "comp-ai", category: "AI Integration & Efficiency", skills: [ "AI Token Optimization", "Root-cause Analysis"],isA4: true },
     { id: "comp-proc", category: "Process & Leadership", skills: ["Cross-functional Collab", "Agile/Scrum", "Pre-dev Planning", "UI/UX Standardizing"],isA4: true },
     { id: "comp-arch", category: "Architecture & Innovation", skills: ["Core Structure Design", "Centralized Configuration", "Reusable Components", "AI Tools Integration"],isA4: true }
   ],
   experiences: [
-  {
-    "id": "exp-1",
-    "company": "Self-directed Study & Project Development",
-    "role": "AI Architecture & Tooling Researcher",
-    "duration": "Jan 2026 – Present",
-    "highlights": [
-      {
-        "id": "exp-1-hl-1",
-        "title": "AI-Driven SDLC Redesign & Human-in-the-Loop (HITL)",
-        "description": "Pioneered an experimental workflow utilizing customized AI (Gemini GEM) to translate business requirements directly into baseline code during the PO-client discovery phase."
-      },
-      {
-        "id": "exp-1-hl-2",
-        "title": "Cross-Role Handoff Optimization",
-        "description": "Validated a \"Human-in-the-Loop\" model, concluding that AI effectively accelerates cross-role handoffs, while human expertise remains critical for architectural integrity and complex debugging, empowering the team to strictly focus on high-value tasks."
-      },
-      {
-        "id": "exp-1-hl-3",
-        "title": "Advanced Context & Token Management",
-        "description": "Conducted continuous research on AI tokenization and context window limits. Developed highly efficient strategies that yield precise, production-ready outputs while strictly minimizing token consumption and maximizing AI accuracy."
-      }
-    ]
-  },
   {
     "id": "exp-2",
     "company": "Axons (CPF IT Center)",
