@@ -16,7 +16,7 @@ export const RESUME_CONFIG: IResumeConfig = {
     { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NodeJS", "TypeScript", "NextJS"],isA4: true },
     { id: "comp-ai", category: "AI Integration & Efficiency", skills: [ "AI Token Optimization", "Root-cause Analysis"],isA4: true },
     { id: "comp-proc", category: "Process & Leadership", skills: ["Cross-functional Collab", "Agile/Scrum", "Pre-dev Planning", "UI/UX Standardizing"],isA4: true },
-    { id: "comp-arch", category: "Architecture & Innovation", skills: ["Core Structure Design", "Centralized Configuration", "Reusable Components", "AI Tools Integration"],isA4: true }
+    { id: "comp-arch", category: "Architecture & Innovation", skills: ["Core Structure Design", "Centralized Configuration", "Reusable Components"],isA4: true }
   ],
   experiences: [
   {
