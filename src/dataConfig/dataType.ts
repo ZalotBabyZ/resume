@@ -13,6 +13,7 @@ export interface ICompetency {
   category: string;
   skills: string[];
   isA4: boolean; 
+  A4Position?: "side" | "body";
 }
 
 export interface IExperienceHighlight {

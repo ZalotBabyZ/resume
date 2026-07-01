@@ -13,60 +13,42 @@ export const RESUME_CONFIG: IResumeConfig = {
   },
   professionalSummary: "Senior Fullstack Developer (React/NodeJS/React Native) with 5 years of experience, specializing in architectural innovations that eliminate redundant workflows for QA and developers. Excels in cross-functional collaboration (PO, QA, UX/UI) to establish highly scalable and maintainable project foundations. Currently driven to design AI-integrated internal tools and architectures that optimize team efficiency, empowering cross-functional teams to systematically focus on true business value.",
   competencies: [
-    { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NodeJS", "TypeScript", "NextJS"],isA4: true },
-    { id: "comp-ai", category: "AI Integration & Efficiency", skills: [ "AI Token Optimization", "Root-cause Analysis"],isA4: true },
-    { id: "comp-proc", category: "Process & Leadership", skills: ["Cross-functional Collab", "Agile/Scrum", "Pre-dev Planning", "UI/UX Standardizing"],isA4: true },
-    { id: "comp-arch", category: "Architecture & Innovation", skills: ["Core Structure Design", "Centralized Configuration", "Reusable Components"],isA4: true }
+    { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NextJS", "NodeJS", "Nest.js", "JavaScript", "TypeScript", "PostgreSQL", "MongoDB", "Firebase"],isA4: true, A4Position: "body" },
+    { id: "comp-arch", category: "Architecture & Innovation", skills: ["Monorepo Architecture", "Multi-tenant System Design", "Core Structure Design", "Centralized Configuration", "Reusable Components"],isA4: true,A4Position: "body" },
+    { id: "comp-proc", category: "Process & Leadership", skills: ["Cross-functional Collab", "Agile/Scrum", "Pre-dev Planning", "UI/UX Standardizing", "Storybook", "Feature Toggle"],isA4: true,A4Position: "side" },
+    { id: "comp-ai", category: "AI Integration & Efficiency", skills: [ "AI Token Optimization", "Root-cause Analysis"],isA4: true,A4Position: "side" }
   ],
   experiences: [
   {
     "id": "exp-2",
     "company": "Axons (CPF IT Center)",
-    "role": "Lead Fullstack Developer (Frontend Focus)",
-    "duration": "Jan 2025 – Dec 2025",
+    "role": "Fullstack Developer - with Lead Frontend",
+    "duration": "Aug 2023 – Dec 2025",
     "highlights": [
       {
         "id": "exp-2-hl-1",
-        "title": "Team Leadership & Process Alignment",
-        "description": "Directed frontend architecture across 3 distinct teams. Collaborated closely with POs and UX/UI during the pre-dev phase to align technical feasibility, effectively mitigating technical risks and ensuring smooth project delivery."
+        "title": "Leadership & Cross-Functional Workflow",
+        "description": "Led frontend architectural design and technical strategy across 3 development teams. Partnered with POs and UX/UI in pre-development to resolve technical constraints early and established standardized workflows and UI documentation. This streamlined UX/UI-to-Dev handoffs, maintained project momentum, and ensured on-time project deliveries."
       },
       {
         "id": "exp-2-hl-2",
-        "title": "Cross-Functional Collaboration",
-        "description": "Streamlined collaboration between UX/UI and Dev teams by establishing standardized workflows and documentation, ensuring seamless handoffs and maintaining project momentum."
+        "title": "Core Architecture & Rapid Adaptation",
+        "description": "Leveraged highly flexible core architectures to rapidly adapt to various complex requirements. As a key example, a major late-stage integration was completed in just 2 weeks instead of the initial 2+ month estimate. Additionally, engineered centralized core structures—notably dynamic PDF and Excel import/export modules—allowing seamless cross-flow adaptability."
+      },
+      {
+        "id": "exp-2-hl-5",
+        "title": "QA & Dev Optimization",
+        "description": "Developed a centralized configuration system that eliminated redundant UI testing, enabling QA to focus strictly on core business logic while significantly reducing code duplication and code review time for developers."
       },
       {
         "id": "exp-2-hl-3",
         "title": "AI Power User & Workflow Optimization",
-        "description": "AI-assisted development, delivering complex features 2-4x faster compared to traditional development timelines with near-zero bugs. Strategically managed AI token limits (using 3x fewer premium requests) and reinvested saved time into designing cross-team architectures."
+        "description": "Accelerated complex feature delivery with near-zero bugs using advanced AI prompt engineering. Strategically optimized AI token consumption (reducing premium requests by 3x) and reallocated saved hours to cross-team architectural design."
       },
       {
         "id": "exp-2-hl-4",
         "title": "Cognitive-Based Mentorship",
-        "description": "Empowered junior developers to reach professional team standards by analyzing their cognitive processing style and tailoring tasks to match their foundational knowledge."
-      }
-    ]
-  },
-  {
-    "id": "exp-3",
-    "company": "Axons (CPF IT Center)",
-    "role": "Fullstack Developer",
-    "duration": "Aug 2023 – Dec 2024",
-    "highlights": [
-      {
-        "id": "exp-3-hl-1",
-        "title": "Rapid Requirement Adaptation",
-        "description": "Leveraged highly flexible core architectures to rapidly adapt to various complex requirements. As a key example, a major late-stage vendor integration was completed in just 2 weeks instead of the initial 2+ month estimate."
-      },
-      {
-        "id": "exp-3-hl-2",
-        "title": "Structural Innovation (Core Components)",
-        "description": "Engineered and implemented centralized core structures, notably dynamic PDF and Excel import/export modules. This initiative allowed seamless cross-flow adaptability regardless of user technical depth."
-      },
-      {
-        "id": "exp-3-hl-3",
-        "title": "QA & Dev Optimization",
-        "description": "Developed a centralized configuration system that eliminated redundant UI/action testing for QA. This strategic shift allowed QA to focus entirely on core business logic impacts, while simultaneously reducing code duplication and code review time for developers."
+        "description": "Mentored and upskilled junior developers by tailoring task assignments to their technical baselines and problem-solving styles, rapidly elevating them to professional team standards."
       }
     ]
   },
@@ -108,8 +90,8 @@ export const RESUME_CONFIG: IResumeConfig = {
   }
 ],
   educations: [
-    { id: "edu-thammasat", degree: "M.Eng. in Artificial Intelligence and IoT", institution: "Thammasat University (TUXSA)", duration: "Jan 2026 – Present" },
-    { id: "edu-stamford", degree: "Master of Business Administration (MBA)", institution: "Stamford International University", duration: "Jan 2025 – Present" },
+    { id: "edu-thammasat", degree: "M.Eng. in Artificial Intelligence and IoT - Online Program", institution: "Thammasat University", duration: "Jan 2026 – Present" },
+    { id: "edu-stamford", degree: "Master of Business Administration - Weekend Program", institution: "Stamford International University", duration: "Jan 2025 – Present" },
     { id: "edu-swpark", degree: "Fullstack JavaScript Bootcamp", institution: "Software Park Thailand Code Camp", duration: "Sep 2020 – Dec 2020" },
     { id: "edu-siriraj", degree: "B.Sc. in Medical Science", institution: "Faculty of Medicine Siriraj Hospital, Mahidol University", duration: "2009 – 2016" },
     { id: "edu-triamudom", degree: "High School Diploma (Science-Math)", institution: "Triam Udom Suksa School", duration: "2006 – 2009" }

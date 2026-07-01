@@ -216,9 +216,9 @@ export default function ResumeApp() {
             </div>
 
             <div>
-              <SectionHeading title="Core Competencies" icon={Sparkles} isA4 />
+              <SectionHeading title="Core Competencies More" icon={Sparkles} isA4 />
               <div className="flex flex-col gap-2 mt-2">
-                {competencies.filter(comp => comp.isA4).map(comp => (
+                {competencies.filter(comp => comp.isA4&&comp.A4Position==="side").map(comp => (
                   <div key={comp.id} >
                     <h3 className="text-[10px] font-bold text-slate-700 uppercase tracking-wide mb-1.5">{comp.category}</h3>
                     <div className="flex flex-wrap gap-1">
@@ -240,9 +240,23 @@ export default function ResumeApp() {
               </p>
             </section>
 
+            <div>
+              <SectionHeading title="Core Competencies" icon={Sparkles} isA4 />
+              <div className="flex flex-row gap-2 mt-2">
+                {competencies.filter(comp => comp.isA4&&comp.A4Position==="body").map(comp => (
+                  <div key={comp.id} >
+                    <h3 className="text-[11px] font-bold text-slate-700 uppercase tracking-wide mb-1.5">{comp.category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {comp.skills.map(skill => <Badge key={skill} intent="brand" isA4>{skill}</Badge>)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <section className="flex-1">
               <SectionHeading title="Professional Experience" icon={Briefcase} isA4 />
-              <div className="mt-3 space-y-2">
+              <div className="mt-3 space-y-3">
                 {experiences.map(exp => (
                   <div key={exp.id} className="relative pl-3 border-l-2 border-slate-200">
                     <div className="absolute w-2 h-2 bg-indigo-500 rounded-full -left-[5px] top-1 ring-2 ring-white" />
