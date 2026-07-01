@@ -4,7 +4,7 @@ import photo from "../asset/photo/photo_2024.png";
 export const RESUME_CONFIG: IResumeConfig = {
   personalInfo: {
     fullName: "Chutinan Chirdchoothum",
-    role: "Senior Fullstack Developer",
+    role: "Senior Frontend Developer",
     phone: "+66 88-631-9555",
     email: "babyzalot@outlook.com",
     linkedinUrl: "https://www.linkedin.com/in/BabyZalot",
@@ -13,7 +13,7 @@ export const RESUME_CONFIG: IResumeConfig = {
   },
   professionalSummary: "Senior Fullstack Developer (React/NodeJS/React Native) with 5 years of experience, specializing in architectural innovations that eliminate redundant workflows for QA and developers. Excels in cross-functional collaboration (PO, QA, UX/UI) to establish highly scalable and maintainable project foundations. Currently driven to design AI-integrated internal tools and architectures that optimize team efficiency, empowering cross-functional teams to systematically focus on true business value.",
   competencies: [
-    { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NextJS", "NodeJS", "Nest.js", "JavaScript", "TypeScript", "PostgreSQL", "MongoDB", "Firebase"],isA4: true, A4Position: "body" },
+    { id: "comp-tech", category: "Technical Skills", skills: ["React", "React Native", "NextJS", "JavaScript", "TypeScript", "Firebase", "NodeJS", "Nest.js", "PostgreSQL", "MongoDB"],isA4: true, A4Position: "body" },
     { id: "comp-arch", category: "Architecture & Innovation", skills: ["Monorepo Architecture", "Multi-tenant System Design", "Core Structure Design", "Centralized Configuration", "Reusable Components"],isA4: true,A4Position: "body" },
     { id: "comp-proc", category: "Process & Leadership", skills: ["Cross-functional Collab", "Agile/Scrum", "Pre-dev Planning", "UI/UX Standardizing", "Storybook", "Feature Toggle"],isA4: true,A4Position: "side" },
     { id: "comp-ai", category: "AI Integration & Efficiency", skills: [ "AI Token Optimization", "Root-cause Analysis"],isA4: true,A4Position: "side" }
